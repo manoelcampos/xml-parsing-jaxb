@@ -16,7 +16,7 @@ import java.util.List;
  *
  * @author Manoel Campos da Silva Filho
  */
-@XmlAccessorType(XmlAccessType.FIELD)
+@XmlAccessorType(XmlAccessType.FIELD) //indica que os campos da classe vão ser convertidos de/para XML
 public class Products
 {
     /**

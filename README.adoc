@@ -1,12 +1,12 @@
 = Lendo arquivos XML de uma URL e convertendo o conteúdo para objetos Java usando API JAXB
 
-O projeto apresenta a classe link:src/main/java/XmlParser.java[XmlParser.java] que permite
+O projeto apresenta a classe link:src/main/java/com/manoelcampos/xmlparsing/XmlParser.java[XmlParser.java] que permite
 indicar a URL de um arquivo XML. A classe então lê tal arquivo e instancia um objeto
 de uma classe indicada, armazenando os dados lidos do XML.
 
 A classe XmlParser é genérica e pode ser usada para fazer o parse de qualquer arquivo
 XML. No exemplo disponibilizado no método main da classe, é lido um arquivo contendo
-uma lista de produtos, a partir de https://raw.githubusercontent.com/manoelcampos/JavaXml2Lua/master/lua-sample-app/products.xml[products.xml]. Em seguida é instanciado um objeto link:src/main/java/com/manoelcampos/products/Products.java[Products.java]
+uma lista de produtos, a partir de https://raw.githubusercontent.com/manoelcampos/xml-parsing-jaxb/master/products.xml[products.xml]. Em seguida é instanciado um objeto link:src/main/java/com/manoelcampos/products/Products.java[Products.java]
 contendo os dados lidos.
 
 O exemplo usa a API JAXB para fazer o binding do conteúdo XML para objetos Java. Como podem ver, é extremamente simples utilizar tal API. O código da classe XmlParser é bastante reduzido. A chave é utilizar as anotações da JAXB nas suas classes de negócio,

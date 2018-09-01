@@ -1,3 +1,5 @@
+package com.manoelcampos.xmlparsing;
+
 
 import com.manoelcampos.products.Product;
 import com.manoelcampos.products.Products;
@@ -41,7 +43,7 @@ public class XmlParser<T> {
         try {
             final XmlParser<Products> parser
                     = new XmlParser(
-                            "https://raw.githubusercontent.com/manoelcampos/JavaXml2Lua/master/lua-sample-app/products.xml",
+                            "https://raw.githubusercontent.com/manoelcampos/xml-parsing-jaxb/master/products.xml",
                             Products.class);
             final Products products = parser.parse();
             for (Product product : products.getProducts()) {
