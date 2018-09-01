@@ -1,3 +1,5 @@
+package com.manoelcampos.xmlparsing;
+
 
 import com.manoelcampos.products.Product;
 import com.manoelcampos.products.Products;
