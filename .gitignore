@@ -1,0 +1,10 @@
+/.classpath
+/.project
+/.settings/
+**/.idea/*
+*~
+*.iml
+nbactions.xml
+target
+tmp
+out
