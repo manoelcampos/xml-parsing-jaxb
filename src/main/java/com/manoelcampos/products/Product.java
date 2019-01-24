@@ -10,7 +10,7 @@ import javax.xml.bind.annotation.*;
  *
  * @author Manoel Campos da Silva Filho
  */
-@XmlAccessorType(XmlAccessType.FIELD) //indica que os campos da classe vão ser convertidos para XML
+@XmlAccessorType(XmlAccessType.FIELD) //indica que os campos da classe vão ser convertidos de/para XML
 public class Product {
     /**
      * Indica que o campo id da classe é definido como um atributo de uma tag no XML.
