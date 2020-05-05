@@ -1,6 +1,6 @@
 = Lendo arquivos XML de uma URL e convertendo o conteúdo para objetos Java usando API JAXB
 
-O projeto apresenta a classe link:src/main/java/com/manoelcampos/xmlparsing/XmlParser.java[XmlParser.java] que permite
+O projeto em Java 11 que apresenta a classe link:src/main/java/com/manoelcampos/xmlparsing/XmlParser.java[XmlParser.java] que permite
 indicar a URL de um arquivo XML. A classe então lê tal arquivo e instancia um objeto
 de uma classe indicada, armazenando os dados lidos do XML.
 
