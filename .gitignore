@@ -8,3 +8,6 @@ nbactions.xml
 target
 tmp
 out
+
+#macOS
+.DS_Store
