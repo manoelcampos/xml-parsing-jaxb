@@ -41,13 +41,12 @@ public class XmlParser<T> {
      * Lê o arquivo XML a partir do url e faz o parse (unmarshall),
      * convertendo tal XML para um objeto Java contendo os dados lidos do arquivo.
      *
-     * @param urlStr URL do arquivo XML.
+     * @param url URL do arquivo XML.
      * @return um objeto da classe indicaca no atributo {@link #targetClass},
      *         contendo os dados lidos do arquivo XML
      * @throws IOException quando o XML não puder ser lido (por exemplo, falha de conexão).
      */
-    public T unmarshal(final String urlStr) throws IOException {
-        final URL url = new URL(urlStr);
+    public T unmarshal(final URL url) throws IOException {
         final URLConnection conn = url.openConnection();
         conn.connect();
 

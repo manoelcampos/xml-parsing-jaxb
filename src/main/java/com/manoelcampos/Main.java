@@ -5,6 +5,7 @@ import com.manoelcampos.products.Products;
 import com.manoelcampos.xmlparsing.XmlParser;
 
 import java.io.IOException;
+import java.net.URL;
 
 /**
  * Classe principal que executa o exemplo.
@@ -31,7 +32,7 @@ public class Main {
         try {
             final XmlParser<Products> parser = new XmlParser<>(Products.class);
             System.out.printf("# Convertendo XML contendo vários objetos Product para um objeto Products a partir do URL %s%n", XML_URL);
-            final Products products = parser.unmarshal(XML_URL);
+            final Products products = parser.unmarshal(new URL(XML_URL));
             System.out.println(products);
 
             System.out.println("\n# Convertendo o objeto Products (contendo uma lista de Product) de volta para XML");
