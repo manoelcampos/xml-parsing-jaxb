@@ -32,9 +32,7 @@ public class Main {
             final XmlParser<Products> parser = new XmlParser<>(Products.class);
             System.out.println("# Convertendo XML contendo vários objetos Product para um objeto Products");
             final Products products = parser.unmarshal(XML_URL);
-            for (Product product : products.getProducts()) {
-                System.out.printf("\t%s%n", product);
-            }
+            System.out.println(products);
 
             System.out.println("\n# Convertendo o objeto Products (contendo uma lista de Product) de volta para XML");
             System.out.println(parser.marshal(products));;

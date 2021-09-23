@@ -37,4 +37,14 @@ public class Products
     public void setProducts(final List<Product> products) {
         this.products = products;
     }
+
+    @Override
+    public String toString() {
+        final var builder = new StringBuilder();
+        for (Product product : products) {
+            builder.append(String.format("\t%s%n", product));
+        }
+
+        return builder.toString();
+    }
 }
