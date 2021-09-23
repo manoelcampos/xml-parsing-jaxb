@@ -1,14 +1,29 @@
+:numbered:
+
 = Convertendo XML de/para objetos Java usando API JAXB image:https://img.shields.io/github/workflow/status/manoelcampos/xml-parsing-jaxb/maven[GitHub Workflow Status]
 
+
+== Introdução
+
 https://javaee.github.io/jaxb-v2/[JAXB] é uma API atual para realizar o mapeamento (https://en.wikipedia.org/wiki/Marshalling_(computer_science)[marshalling / unmarshalling]) de XML para objetos Java e vice versa. O projeto em Java 15 apresenta a classe link:src/main/java/com/manoelcampos/xmlparsing/XmlParser.java[XmlParser.java] que permite
-indicar a URL de um arquivo XML. A classe então lê tal arquivo e instancia um objeto de uma classe indicada, armazenando os dados lidos do XML. Tal classe só é necessária pois ela faz o download do arquivo XML a partir de uma URL e inclui outras facilidades. Mas a conversão é feita com uma única linha de código:
+indicar a URL de um arquivo XML. A classe então lê tal arquivo e instancia um objeto de uma classe indicada, armazenando os dados lidos do XML.
 
-- XML para objetos Java: método `JAXB.unmarshal()`
-- Objetos Java para XML: método `JAXB.marshal()`
+== Exemplo de uso
 
-A classe XmlParser é genérica e pode ser usada para fazer o parse de qualquer arquivo
-XML. No exemplo de uso disponibilizado na classe link:src/main/java/com/manoelcampos/Main.java[Main.java], é lido um arquivo contendo uma lista de produtos, a partir de https://raw.githubusercontent.com/manoelcampos/xml-parsing-jaxb/master/products.xml[products.xml]. Em seguida é instanciado um objeto link:src/main/java/com/manoelcampos/products/Products.java[Products.java]
+A classe XmlParser é genérica e pode ser usada para fazer o parse de qualquer arquivo XML. No exemplo de uso disponibilizado na classe link:src/main/java/com/manoelcampos/Main.java[Main.java], é lido um arquivo contendo uma lista de produtos, a partir de https://raw.githubusercontent.com/manoelcampos/xml-parsing-jaxb/master/products.xml[products.xml]. Em seguida é instanciado um objeto link:src/main/java/com/manoelcampos/products/Products.java[Products.java]
 contendo os dados lidos.
 
 O exemplo usa a API JAXB para fazer o binding do conteúdo XML para objetos Java. Como podem ver, é extremamente simples utilizar tal API. O código da classe XmlParser é bastante reduzido. A chave é utilizar as anotações da JAXB nas suas classes de negócio, que representam a estrutura do arquivo XML (neste exemplo as classes link:src/main/java/com/manoelcampos/products/Product.java[Product.java] e link:src/main/java/com/manoelcampos/products/Products.java[Products.java]), para permitir converter o XML para objetos Java e vice-versa.
 
+== Detalhes
+
+A classe XmlParser só é necessária pois ela faz o download de arquivos XML a partir de uma URL e inclui outras facilidades. Mas a conversão de ou para é feita com uma única linha de código:
+
+- XML para objetos Java: método `JAXB.unmarshal()`
+- Objetos Java para XML: método `JAXB.marshal()`
+
+No entanto, usar estes métodos diretamente requer a passagem de alguns parâmetros adicionais.
+
+== Outras versões
+
+Existem versões em https://github.com/manoelcampos/xml-parsing-jaxb/releases/tag/java-8[Java 8] e https://github.com/manoelcampos/xml-parsing-jaxb/releases/tag/java-11[Java 11] que não são mais atualizadas.
