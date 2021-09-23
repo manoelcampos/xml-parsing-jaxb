@@ -29,9 +29,9 @@ public class Main {
      */
     public static void main(String[] args) {
         try {
-            final XmlParser<Products> parser = new XmlParser();
+            final XmlParser<Products> parser = new XmlParser<>(Products.class);
             System.out.println("# Convertendo XML contendo vários objetos Product para um objeto Products");
-            final Products products = parser.unmarshal(Products.class, XML_URL);
+            final Products products = parser.unmarshal(XML_URL);
             for (Product product : products.getProducts()) {
                 System.out.printf("\t%s%n", product);
             }
