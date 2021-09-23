@@ -33,7 +33,7 @@ public class XmlParser<T> {
      * @param targetClass classe de objetos a serem convertidos de/para XML.
      */
     public XmlParser(final Class<T> targetClass){
-        final var msg = "A targetClass indica a classe do objeto Java para fazer conversão de/para XML. Tal parâmetro é obrigatório.";
+        final var msg = "A targetClass indica a classe do objeto Java para fazer conversão de/para XML. Tal parâmetro não pode ser nulo.";
         this.targetClass = Objects.requireNonNull(targetClass, msg);
     }
 
