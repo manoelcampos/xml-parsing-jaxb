@@ -30,7 +30,7 @@ public class Main {
     public static void main(String[] args) {
         try {
             final XmlParser<Products> parser = new XmlParser<>(Products.class);
-            System.out.println("# Convertendo XML contendo vários objetos Product para um objeto Products");
+            System.out.printf("# Convertendo XML contendo vários objetos Product para um objeto Products a partir do URL %s%n", XML_URL);
             final Products products = parser.unmarshal(XML_URL);
             System.out.println(products);
 
