@@ -2,6 +2,7 @@ package com.manoelcampos.xmlparsing;
 
 import javax.xml.bind.JAXB;
 import java.io.IOException;
+import java.io.StringReader;
 import java.io.StringWriter;
 import java.net.URL;
 import java.net.URLConnection;
@@ -52,6 +53,17 @@ public class XmlParser<T> {
 
         //A stream é automaticamente fechada pelo método unmarshal
         return JAXB.unmarshal(conn.getInputStream(), targetClass);
+    }
+
+    /**
+     * Converte um documento XML armazenado em uma String para um objeto Java contendo os dados do XML.
+     *
+     * @param xml String contendo o documento XML a ser convertido par aum objeto Java
+     * @return um objeto da classe indicaca no atributo {@link #targetClass},
+     *         contendo os dados lidos do arquivo XML
+     */
+    public T unmarshal(final String xml)  {
+        return JAXB.unmarshal(new StringReader(xml), targetClass);
     }
 
     /**
