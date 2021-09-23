@@ -50,11 +50,13 @@ public class Main {
             final XmlParser<Products> parser = new XmlParser<>(Products.class);
             System.out.println("# Convertendo XML de um URL para um objeto Products");
             final Products products1 = parser.unmarshal(new URL(XML_URL));
+
+            /** Veja {@link Products#toString()}. */
             System.out.println(products1);
 
             System.out.println("\n# Convertendo o objeto Products de volta para XML");
             final String xml = parser.marshal(products1);
-            System.out.println(xml);;
+            System.out.println(xml);
 
             System.out.println("# Convertendo XML armazenado em uma String para um objeto Products");
             final Products products2 = parser.unmarshal(XML);
