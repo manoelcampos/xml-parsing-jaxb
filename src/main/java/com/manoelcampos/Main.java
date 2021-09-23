@@ -31,11 +31,11 @@ public class Main {
     public static void main(String[] args) {
         try {
             final XmlParser<Products> parser = new XmlParser<>(Products.class);
-            System.out.printf("# Convertendo XML contendo vários objetos Product para um objeto Products a partir do URL %s%n", XML_URL);
+            System.out.println("# Convertendo XML de um URL para um objeto Products");
             final Products products = parser.unmarshal(new URL(XML_URL));
             System.out.println(products);
 
-            System.out.println("\n# Convertendo o objeto Products (contendo uma lista de Product) de volta para XML");
+            System.out.println("\n# Convertendo o objeto Products de volta para XML");
             final String xml = parser.marshal(products);
             System.out.println(xml);;
         } catch (IOException e) {
