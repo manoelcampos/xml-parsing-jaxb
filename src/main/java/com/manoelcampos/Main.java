@@ -13,7 +13,7 @@ import java.net.URL;
  */
 public class Main {
     /**
-     * URL de onde o arquivo XML será obtido.
+     * URL de um arquivo XML a ser convertido para um objeto Java.
      */
     private static final String XML_URL = "https://raw.githubusercontent.com/manoelcampos/xml-parsing-jaxb/master/products.xml";
 
