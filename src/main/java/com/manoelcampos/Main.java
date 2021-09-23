@@ -40,6 +40,9 @@ public class Main {
      * ler um arquivo XML contendo uma lista de produtos
      * e então criar um objeto {@link Products} contendo os produtos
      * lidos do arquivo.
+     * Os produtos são facilmente impressos com um único println
+     * por conta do método {@link Products#toString()}.
+     *
      * O exemplo também mostra como converter um objeto Java como {@link Products}
      * de volta para XML.
      *
@@ -50,8 +53,6 @@ public class Main {
             final XmlParser<Products> parser = new XmlParser<>(Products.class);
             System.out.println("# Convertendo XML de um URL para um objeto Products");
             final Products products1 = parser.unmarshal(new URL(XML_URL));
-
-            /** Veja {@link Products#toString()}. */
             System.out.println(products1);
 
             System.out.println("\n# Convertendo o objeto Products de volta para XML");
