@@ -1,6 +1,6 @@
 = Convertendo XML de/para objetos Java usando API JAXB image:https://img.shields.io/github/workflow/status/manoelcampos/xml-parsing-jaxb/maven[GitHub Workflow Status]
 
-https://javaee.github.io/jaxb-v2/[JAXB] é uma API atual para realizar o mapeamento (https://en.wikipedia.org/wiki/Marshalling_(computer_science)[marshalling / unmarshalling]) de XML para objetos Java e vice versa. O projeto em Java 11 que apresenta a classe link:src/main/java/com/manoelcampos/xmlparsing/XmlParser.java[XmlParser.java] que permite
+https://javaee.github.io/jaxb-v2/[JAXB] é uma API atual para realizar o mapeamento (https://en.wikipedia.org/wiki/Marshalling_(computer_science)[marshalling / unmarshalling]) de XML para objetos Java e vice versa. O projeto em Java 11 apresenta a classe link:src/main/java/com/manoelcampos/xmlparsing/XmlParser.java[XmlParser.java] que permite
 indicar a URL de um arquivo XML. A classe então lê tal arquivo e instancia um objeto de uma classe indicada, armazenando os dados lidos do XML. Tal classe só é necessária pois ela faz o download do arquivo XML a partir de uma URL e inclui outras facilidades. Mas a conversão é feita com uma única linha de código:
 
 - XML para objetos Java: método `JAXB.unmarshal()`
