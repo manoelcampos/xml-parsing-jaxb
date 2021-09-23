@@ -60,7 +60,8 @@ public class XmlParser<T> {
      * @return String do XML convertido
      */
     public String marshal(final T object) {
-        final StringWriter writer = new StringWriter();
+        Objects.requireNonNull(object, "O objeto a ser convertido para XML não pode ser nulo.");
+        final var writer = new StringWriter();
         JAXB.marshal(object, writer);
         return writer.toString();
     }
