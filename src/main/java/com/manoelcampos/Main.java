@@ -36,7 +36,8 @@ public class Main {
             System.out.println(products);
 
             System.out.println("\n# Convertendo o objeto Products (contendo uma lista de Product) de volta para XML");
-            System.out.println(parser.marshal(products));;
+            final String xml = parser.marshal(products);
+            System.out.println(xml);;
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
