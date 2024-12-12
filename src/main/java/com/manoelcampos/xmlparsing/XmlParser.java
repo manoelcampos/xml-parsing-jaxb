@@ -1,6 +1,7 @@
 package com.manoelcampos.xmlparsing;
 
-import javax.xml.bind.JAXB;
+import jakarta.xml.bind.JAXB;
+
 import java.io.IOException;
 import java.io.StringReader;
 import java.io.StringWriter;
@@ -9,8 +10,8 @@ import java.net.URLConnection;
 import java.util.Objects;
 
 /**
- * Classe genêrica que lê um arquivo XML a partir de uma URL e transforma seu conteúdo 
- * em um objeto java contendo os dados lidos. 
+ * Classe genêrica que lê um arquivo XML a partir de uma URL e transforma seu conteúdo
+ * em um objeto java contendo os dados lidos.
  * Ela usa a <a href="https://javaee.github.io/jaxb-v2/>API JAXB</a> para fazer o parse de XML.
  *
  * <p>Com o uso de generics, quem for utilizar a classe não precisa fazer typecast

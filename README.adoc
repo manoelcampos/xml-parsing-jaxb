@@ -1,11 +1,13 @@
 :numbered:
 
-= Convertendo XML de/para objetos Java usando API JAXB image:https://img.shields.io/github/workflow/status/manoelcampos/xml-parsing-jaxb/maven[GitHub Workflow Status]
+= Convertendo XML de/para objetos Java usando API JAXB image:https://img.shields.io/github/actions/workflow/status/manoelcampos/xml-parsing-jaxb/:workflow[GitHub Actions Workflow Status]
+
 
 
 == Introdução
 
-https://javaee.github.io/jaxb-v2/[JAXB] é uma API atual para realizar o mapeamento (https://en.wikipedia.org/wiki/Marshalling_(computer_science)[marshalling / unmarshalling]) de XML para objetos Java e vice versa. O projeto em Java 15 apresenta a classe link:src/main/java/com/manoelcampos/xmlparsing/XmlParser.java[XmlParser.java] que permite
+https://javaee.github.io/jaxb-v2/[JAXB] é uma API atual para realizar o mapeamento (https://en.wikipedia.org/wiki/Marshalling_(computer_science)[marshalling / unmarshalling]) de XML para objetos Java e vice-versa.
+O projeto em Java 21 apresenta a classe link:src/main/java/com/manoelcampos/xmlparsing/XmlParser.java[XmlParser.java] que permite
 indicar a URL de um arquivo XML. A classe então lê tal arquivo e instancia um objeto de uma classe indicada, armazenando os dados lidos do XML.
 
 == Exemplo de uso
@@ -17,7 +19,7 @@ O exemplo usa a API JAXB para fazer o binding do conteúdo XML para objetos Java
 
 == Detalhes
 
-A classe XmlParser só é necessária pois ela faz o download de arquivos XML a partir de uma URL e inclui outras facilidades. Mas a conversão de ou para é feita com uma única linha de código:
+A classe XmlParser só é necessária, pois ela faz o download de arquivos XML a partir de uma URL e inclui outras facilidades. Mas a conversão de ou para é feita com uma única linha de código:
 
 - XML para objetos Java: método `JAXB.unmarshal()`
 - Objetos Java para XML: método `JAXB.marshal()`
@@ -26,4 +28,4 @@ No entanto, usar estes métodos diretamente requer a passagem de alguns parâmet
 
 == Outras versões
 
-Existem versões em https://github.com/manoelcampos/xml-parsing-jaxb/releases/tag/java-8[Java 8] e https://github.com/manoelcampos/xml-parsing-jaxb/releases/tag/java-11[Java 11] que não são mais atualizadas.
+Existem versões em https://github.com/manoelcampos/xml-parsing-jaxb/releases/tag/java-8[Java 8], https://github.com/manoelcampos/xml-parsing-jaxb/releases/tag/java-11[Java 11] e https://github.com/manoelcampos/xml-parsing-jaxb/releases/tag/java-15[Java 15] que não são mais atualizadas.
